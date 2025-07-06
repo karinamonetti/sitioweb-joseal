@@ -1,0 +1,34 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+
+
+.container{
+    background-image: linear-gradient(#09111D, #471F65);
+    position: fixed;
+    inset: 0;
+}
+
+.space-1,.space-2,
+.space-3 {
+  width: var(--size);
+  height: var(--size);
+  background: #fff;
+  box-shadow: var(--space-layer);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 75%;
+  animation: moveStars var(--duration) linear infinite;
+  border-radius: 100%;
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100vh); }
+}
